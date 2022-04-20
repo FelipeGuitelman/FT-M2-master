@@ -1,6 +1,6 @@
-(function () {
+//(function () {
 
-  window.EventEmitter = EventEmitter;
+  //window.EventEmitter = EventEmitter;
 
   // our EventEmitter constructor function
   function EventEmitter () {
@@ -22,7 +22,8 @@
     // located on the instance's subscribers object.
     this.subscribers[eventName].push(eventListener);
 
-  };
+    module.exports = EventEmitter
+  //};
 
   // To be used like:
   // instanceOfEE.emit('codec', 'Hey Snake, Otacon is calling!');
@@ -42,5 +43,5 @@
     });
 
   };
-
-})();
+  }
+//})();
